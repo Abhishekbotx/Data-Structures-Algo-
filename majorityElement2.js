@@ -52,9 +52,16 @@ const hmap=new Map();
     }
  }
 
- array2.push(num1);
- array2.push(num2);
- return array2
+    count1 = 0, count2 = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === num1) count1++;
+        if (array[i] === num2) count2++;
+    }
+
+    let condition = Math.floor(array.length / 3);
+    if (count1 > condition) array2.push(num1);
+    if (count2 > condition && num2 !== num1) array2.push(num2);
+    return array2
 }
 
 const answer=majorityElementNby3(numArr)
