@@ -24,7 +24,8 @@ const hmap=new Map();
 
 
  //Optimal Approach using O(N) time complexity
- const numArr=[0,0,1,3,1,1,4]
+//  const numArr=[0,0,1,3,1,1,4]
+ const numArr=[0,0,1,3,1,1]
 
 const majorityElementNby3 = (array) => {
     let count1 = 0;
