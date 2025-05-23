@@ -1,3 +1,4 @@
+/*Longest Subarray Problem */
 const arr = [100, 200, 1, 3, 2, 4];
 const longestConsecutiveSequence = (arr) => {
     const n = arr.length;
