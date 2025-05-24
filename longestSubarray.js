@@ -12,19 +12,19 @@ let tempSum=0;
 for(let i=0;i<arr.length;i++){
  if(arr[i]+ sum <k){
     sum+=arr[i]
-     nums.push(arr[i])
+    nums.push(arr[i])
  }else if(arr[i] + sum ==k){
     nums.push(arr[i]);
     sum+=arr[i]
     console.log('num>>',nums)
     return nums
  }else{
-        const number=nums.shift()
-        // console.log(`number${i}:`,number)
-        tempSum=sum;
-        tempSum-=number
-        tempSum+=arr[i]
-        // console.log(`sum${i}:`,tempSum)
+    const number=nums.shift()
+    // console.log(`number${i}:`,number)
+    tempSum=sum;
+    tempSum-=number
+    tempSum+=arr[i]
+    // console.log(`sum${i}:`,tempSum)
 
     if(tempSum==k){
           nums.push(arr[i]);
