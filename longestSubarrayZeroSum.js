@@ -1,3 +1,18 @@
+/*
+Core Intuition:
+•We use prefix sum to track the cumulative sum as we traverse the array.
+
+•If the same prefix sum appears again, it means the elements between those two indices sum to 0.
+-->Why? Because the total sum hasn’t changed, so the difference in between must be zero.
+    Think of it like this:
+    If sum[i] == sum[j], then the subarray from (i+1 to j) must cancel itself out ⇒ sum = 0.
+
+
+•Store first occurrence of every prefix sum in a HashMap.
+ Use that to calculate the length of zero-sum subarrays.
+
+*/
+
 //The intuition is something, if we have seen a value before means the element subarrray sum will be zero in between
 
 const longestSubarrayZeroSum=(arr)=>{
