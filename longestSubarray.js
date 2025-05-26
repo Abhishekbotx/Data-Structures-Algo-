@@ -1,3 +1,6 @@
+/*problem:Longest subarray of sum =k
+  🍁Need improvement in this approach
+*/
 
 const array=[2,3,6,4,7,1];  
 const k=12;
@@ -33,7 +36,7 @@ for(let i=0;i<arr.length;i++){
     }
 
     
-    if (sum <= k) { 
+    if (tempSum <= k) { 
       nums.length=0;
       sum=arr[i];
       nums.push(arr[i]);

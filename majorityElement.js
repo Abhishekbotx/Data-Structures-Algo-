@@ -23,6 +23,17 @@
 // console.log("Majority Element:", majorityElement);
 
 
+/*Optimal Approach using O(N) + O(N) 
+
+Intuition:The intution is clear using booye moores algorithm,
+we are initially taking a number and making it the num that can be the possible max then,
+then moving forward if that number again we meet then  make the count ++;
+
+If not then -- from count and if the count is zero then make the next number as your possible
+max by this approach we can have our possible max,till the end of the iteration
+
+ Then we manually check again having a max count if we are having that num is actually greater than n/2
+*/
 const arr=[6,5,5]
 let count=0;
 let num;
@@ -44,7 +55,7 @@ for(let i=0;i<arr.length;i++){
 }
 
 let maxm=0
-
+//Checking manually if the number is actually the majority
 for(let i=0;i<arr.length;i++){
     arr[i]==num
     maxm++;
