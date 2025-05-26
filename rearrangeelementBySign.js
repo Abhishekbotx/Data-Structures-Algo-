@@ -1,4 +1,11 @@
- /*
+ /*Difficulty-medium
+ Leetcode:Q-2149. Rearrange Array Elements by Sign
+ Link:https://leetcode.com/problems/rearrange-array-elements-by-sign/description/
+
+ intution to optimal approach:
+ - we will start putting positive number on even places and odd on add start post from 0th index and negative from 1st index
+ - the moment we get positive value push it on that array in the new array and then +2 that index same for negative easy 
+
  //Bruteforce approach with time complexity o(N + N/2) and space complexity O(N/2 + N/2)
     const rearrangeElementBySign=(arr){
         n=arr.length

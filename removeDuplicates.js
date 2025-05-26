@@ -1,4 +1,7 @@
-/*Leetcode Q-26 Link:https://leetcode.com/problems/remove-duplicates-from-sorted-array/ */
+/*Leetcode Q-26 Link:https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+Time complexity :O(N)
+Intuition:if your current element is not eqal to prev element push this number in the array and count ++
+*/
 var removeDuplicates = function(arr) {
     let count=1;
     // let j=0;

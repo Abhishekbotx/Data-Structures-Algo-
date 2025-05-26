@@ -32,6 +32,37 @@
 
 /*
 Optimal solution using mergesort approach
+
+    Visualization & Intuition for Counting Reverse Pairs:
+
+    We're counting the number of (i, j) pairs such that:
+    - i < j
+    - arr[i] > 2 * arr[j]
+
+    To do this efficiently, we use a modified Merge Sort.
+
+    At each level of merge sort:
+    1. We recursively sort and count reverse pairs in the **left half**.
+    2. We do the same for the **right half**.
+    3. Then, we count **cross pairs** — where `i` is in the left half and `j` is in the right half.
+
+    Analogy:
+    Think of the array being split like a knockout tournament bracket.
+
+    Example:
+    Original: [4, 1, 6, 2, 9]
+        ↓ split
+    Left: [4, 1, 6]   Right: [2, 9]
+        ↓
+    Check for reverse pairs across [4,1,6] and [2,9]
+
+    💡 Why we add all three counts:
+    - Left side might have valid (i, j)
+    - Right side might have valid (i, j)
+    - Most importantly, some (i, j) might exist where i is in left and j is in right — this is the tricky part we count manually before merging.
+
+    After counting, we merge to maintain sorted order — essential for higher-level comparisons.
+
 */
 
 const merge=(arr,low,mid,high)=>{
@@ -94,34 +125,4 @@ const answer=mergeSort(arr,0,arr.length-1);
 console.log('sorted arr:',arr)
 console.log('reverse pairs count: ',answer)
 
-/*
- Visualization & Intuition for Counting Reverse Pairs:
 
-We're counting the number of (i, j) pairs such that:
-- i < j
-- arr[i] > 2 * arr[j]
-
-To do this efficiently, we use a modified Merge Sort.
-
-At each level of merge sort:
-1. We recursively sort and count reverse pairs in the **left half**.
-2. We do the same for the **right half**.
-3. Then, we count **cross pairs** — where `i` is in the left half and `j` is in the right half.
-
- Analogy:
-Think of the array being split like a knockout tournament bracket.
-
-Example:
-   Original: [4, 1, 6, 2, 9]
-     ↓ split
-   Left: [4, 1, 6]   Right: [2, 9]
-     ↓
-   Check for reverse pairs across [4,1,6] and [2,9]
-
-💡 Why we add all three counts:
-- Left side might have valid (i, j)
-- Right side might have valid (i, j)
-- Most importantly, some (i, j) might exist where i is in left and j is in right — this is the tricky part we count manually before merging.
-
-After counting, we merge to maintain sorted order — essential for higher-level comparisons.
-*/
