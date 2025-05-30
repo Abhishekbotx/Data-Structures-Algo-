@@ -35,6 +35,7 @@
     return ans
 }
 
-const arr=[3,5,8,9,12,19]
-const answer=upperBound(arr,8);
+// const arr=[3,5,8,9,12,19]
+const arr=[5,8,9,12,19,20]
+const answer=upperBound(arr,18);
 console.log('answer>>upper bound:',answer);
