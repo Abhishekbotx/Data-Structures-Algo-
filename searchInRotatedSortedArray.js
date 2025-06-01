@@ -43,7 +43,8 @@ const searchInRotateSortedArray=(arr,target)=>{
 }
 
 // const array=[4,5,6,7,1,2,3]
-const array=[3,1]
+// const array=[3,1]
+const array=[3,5,6,1]
 
 const answer=searchInRotateSortedArray(array,1);
 console.log('answer::',answer)
